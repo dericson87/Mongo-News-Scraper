@@ -8,7 +8,7 @@ This is a full stack application that scrapes articles from The Onion, allowing 
 ### Demo
 * Heroku: [The Onion Fake News Scraper](https://mongo-scrapey-dson.herokuapp.com/)
 
-<img src="" width="400"/>  <img src="" width="400"/>
+<img src="FakeNewsApp.png" width="400"/>
 
 ## Technologies
 * MongoDB 
