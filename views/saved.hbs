@@ -1,0 +1,80 @@
+{{> nav }}
+{{> jumbo }}
+
+<div class="container article-container">
+  {{!-- displays articles from the db if there are any --}}
+    {{#if articles.length}} 
+      <div class="container saved-articles">
+        {{#each articles}}
+          <div class="row article my-5 pb-4">
+            <div class="col-sm-5 mb-3 mb-sm-3">
+              <a href="{{link}}" target="_blank">
+                <img class="img-fluid" src="{{img}}">
+              </a>
+            </div>
+            <div class="col-sm-7 border-bottom border-secondary pb-3 pb-sm-3">
+              <h3 class="mb-2">
+                <a href="{{link}}" target="_blank">{{title}}</a>
+              </h3>
+              <p class="mb-2">{{excerpt}}</p>
+              <div class="col sm-4">
+
+              <button type="button" class="btn create-note" data-toggle="modal" data-target="#save-note-modal" data-id="{{_id}}">Create Note</button>
+              <button type="button" class="btn view-note" data-toggle="modal" data-target="#view-notes-modal" data-id="{{_id}}">View Notes</button>
+              <button type="button" class="btn remove-article" data-id="{{_id}}">Remove Article</button>
+              </div>
+            </div>
+          </div>
+        {{/each}} 
+      {{else}}
+        <div>
+          <h2 class="text-center none">No Articles!</h2>
+        </div>
+    {{/if}}
+  </div>
+</div>
+
+{{!-- <!-- Save Note Modal --> --}}
+<div class="modal fade" id="save-note-modal" tabindex="-1" role="dialog" aria-labelledby="save-note-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create Note</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <textarea name="new-note-text" class="form-control" id="new-note-text" rows="3"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn save-note">Create Note</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- View Notes Modal --}}
+<div class="modal fade" id="view-notes-modal" tabindex="-1" role="dialog" aria-labelledby="view-notes-modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Article Notes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="all-article-notes">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

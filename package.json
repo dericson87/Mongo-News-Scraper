@@ -1,0 +1,39 @@
+{
+  "name": "mongo-news-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dericson87/Mongo-News-Scraper.git"
+  },
+  "author": "Derek Ericson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dericson87/Mongo-News-Scraper/issues"
+  },
+  "homepage": "https://github.com/dericson87/Mongo-News-Scraper#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "browser-sync": "^2.26.3",
+    "cheerio": "^1.0.0-rc.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.16.1",
+    "express-validator": "^5.3.1",
+    "mongoose": "^5.5.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pump": "^3.0.0"
+  },
+  "devDependencies": {
+  }
+}
