@@ -5,7 +5,6 @@ https://mongo-scrapey-dson.herokuapp.com/
 
 This is a full stack application that scrapes articles from The Onion, allowing users to save articles they like and make notes which other users can view.  
 
-### Demo
 * Heroku: [The Onion Fake News Scraper](https://mongo-scrapey-dson.herokuapp.com/)
 
 <img src="FakeNewsApp.png" width="600"/>
